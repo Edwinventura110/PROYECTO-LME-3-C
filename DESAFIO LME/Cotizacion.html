@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+    <title>Prueba JS</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="./css/estilos_tarjeta.css">
+</head>
+<body>
+
+<script>
+ 
+    function MR(){SBT
+        const Precio = 60;
+        var name, Email, SBT, Iva, PT, cantidad;
+        name = document.getElementById("Nombre").value;
+        Email = document.getElementById("Correo").value;
+        cantidad= document.getElementById("Cantidad").value;
+
+        SBT = Precio * cantidad;
+        Iva = SBT * 0.13;
+        PT = SBT + Iva;
+        Iva = Iva.toFixed(2); 
+        PT = PT.toFixed(2); 
+
+        if (name !=0 && Email!=0 && cantidad !=0) {
+            document.getElementById("Resultados").style.height = "425px";
+            document.getElementById("Resultados").innerHTML="<p id='title'>Cotización final: </p><p>Su nombre es: " + name
+            + "<br><br>Su E-Mail es: " + Email
+            + "<br><br>Su subtotal es: $" + SBT /* SBT= subtotal*/
+            + "<br><br>Su iva total es: $" + Iva 
+            + "<br><br>Su total a pagar es: $" + PT +"</p>"; /*PT= precio total*/
+            
+        }
+    }
+
+</script>
+<h1 class="title"></h1>
+    
+<div class="container">
+   
+    <div class="card">
+        <img src="./img/mando.jpeg">
+        <h4>Mando  PS5</h4>
+        <p> Ofrece respuesta háptica inmersiva, 
+            gatillos adaptativos dinámicos, todo en un diseño icónico.</p>
+        <a></a>Precio: 60.00$</a>
+    </div>
+
+</div>
+
+     <!-- Menu de Navegacion de la Pagina -->
+    <header id="header">
+    <nav class="menu">
+     <div class="logo-box">
+       <h1><a href="#">PLAY HAS NO LIMITS
+</a></h1>
+       <span class="btn-menu"><i class="fas fa-bars"></i></span>
+     </div>
+     
+     <div class="list-container">
+        <ul class="lists">
+            <li><a href="index.html" class="active">Inicio</a></li>
+        </ul>
+     </div>
+    </nav>
+
+      <!-- Footer -->
+ <footer class="footer">
+   <div class="skew-arriba"></div>
+  <div class="deg-footer"></div>
+ 
+  <div class="ejeZfooter">
+  <div class="footer-content">
+   <div class="footer-title">
+     <h2>Formulario de Cotizaciones</h2>
+     <hr>
+   </div>
+
+<section class="accesorios">
+    <div class="box-accesorios">
+      <div class="card-accesorios">
+        <div class="card-img"><img src="img/play 3.jpg" alt="">
+        </div>
+</div>
+</div>
+</section>
+
+    </p>
+    <div class="formulario-content">
+    <form id="formulario">
+        <p>Nombre:</p><input type="text" placeholder="Ingresa tu nombre" id="Nombre" required><br>
+        <p>Email:</p> <input type="email" placeholder="Ingresa tu correo electrónico" id="Correo" required><br>
+        <p>Cantidad:</p> <input type="number" placeholder="Escriba la cantidad del producto que desea cotizar" id="Cantidad" required><br>
+        <div class="send"></div><button type="button" onclick="MR()">Cotizar </button></div>
+    </form>
+
+    <div id="Resultados">
+    </div>
+
+   <div class="footer-text">
+   </div>
+  
+  </div>
+</div>
+ </footer>
+ <!-- Scripts -->
+<script src="https://kit.fontawesome.com/35db202371.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
